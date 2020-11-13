@@ -9,7 +9,7 @@ from os.path import isfile
 from features.extraction import ActionFeatureGenerator, RelationFeatureGenerator
 from models.state import ParsingState
 from nltk import Tree
-from nltk.draw import TreeWidget
+from nltk.draw.tree import TreeWidget
 from nltk.draw.util import CanvasFrame
 from utils.document import Doc
 from utils.other import rel2class

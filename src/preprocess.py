@@ -9,6 +9,7 @@ from utils.xmlreader import reader, writer, combine
 
 
 def join_edus(fedu):
+    print(str(fedu))
     ftext = fedu.replace('.edus', '.text')
     with open(fedu, 'r') as fin, open(ftext, 'w') as fout:
         lines = [l.strip() for l in fin if l.strip()]

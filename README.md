@@ -4,6 +4,17 @@ Here we implement the RST discourse parser described in [A Two-stage Parsing Met
 
 The best-trained models are put in the `data/model` folder. Due to the licence of RST data corpus, we can't include the data in our project folder. To reproduce the result in the paper, you need to download it from the LDC, preprocess the data as we state below and evaluate the model with `python3 main.py --eval --eval_dir EVAL_DIR`.  
 
+### Installation beside requirements and stanford core NLP:
+Tkinter follow https://stackoverflow.com/questions/15884075/tkinter-in-a-virtualenv and add symlink to venv.
+
+### Obtain Parsing results
+
+1. Get EDUs from text (ex: use NeuralEDUseg) and save them as '.edu.txt'
+2. go to stanford core nlp folder (in my case inside Tools) and run:   
+`java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer`
+4. `pip install pycorenlp` in virtualenv
+3. `python3 parse.py --edu_file_dir EDU_FILE_DIR --output_dir OUTPUT_DIR`
+
 ### Usage:
 
 1. Preprocess the data:
